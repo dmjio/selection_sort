@@ -18,7 +18,10 @@ use std::vec::Vec;
 pub fn selection_sort<T: PartialOrd>(vec: &mut Vec<T>) {
     let mut j_min;
     let len = vec.len();
-    for i in 0..len {
+    if len == 0 {
+        return;
+    }
+    for i in 0..len - 1 {
         j_min = i;
         for j in i + 1..len {
             if j >= len {

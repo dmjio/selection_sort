@@ -37,5 +37,5 @@ fn swap_test() {
     selection_sort(&mut vec);
     println!("length: {}", vec.len());
     println!("{:?}", vec);
-    assert!([1, 2, 3] == [1, 2, 3]);
+    assert!(vec == [1, 2, 3]);
 }

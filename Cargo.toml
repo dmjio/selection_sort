@@ -10,3 +10,6 @@ license = "MIT"
 repository = "https://github.com/dmjio/selection_sort"
 description = "Selection sort algorithm"
 readme = "README.md"
+
+[dependencies]
+quickcheck = "0.8"

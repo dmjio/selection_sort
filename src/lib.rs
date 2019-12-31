@@ -18,7 +18,7 @@ use std::vec::Vec;
 pub fn selection_sort<T: PartialOrd>(vec: &mut Vec<T>) {
     let mut j_min;
     let len = vec.len();
-    for i in 0..len - 1 {
+    for i in 0..len {
         j_min = i;
         for j in i + 1..len {
             if j >= len {
@@ -34,15 +34,17 @@ pub fn selection_sort<T: PartialOrd>(vec: &mut Vec<T>) {
     }
 }
 
-#[cfg(test)]
 mod tests {
+    #[cfg(test)]
     use super::*;
-    #[test]
-    fn swap_test() {
-        let mut vec = vec![1, 3, 2];
-        selection_sort(&mut vec);
-        println!("length: {}", vec.len());
-        println!("{:?}", vec);
-        assert!(vec == [1, 2, 3]);
+    use quickcheck::quickcheck;
+    quickcheck! {
+      fn prop(vec: Vec<u32>) -> bool {
+        let mut a = vec.clone();
+        let mut b = vec.clone();
+        selection_sort (&mut a);
+        b.sort();
+        return a == b;
     }
+  }
 }

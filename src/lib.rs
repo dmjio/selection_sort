@@ -1,19 +1,19 @@
 use std::vec::Vec;
 
 // Selection sort function
-pub fn selection_sort(vec: &mut Vec<i32>) {
-    let mut j_min: i32;
-    let len: i32 = vec.len() as i32;
-    for i in 0..len - 1 as i32 {
+pub fn selection_sort<T: PartialOrd>(vec: &mut Vec<T>) {
+    let mut j_min;
+    let len = vec.len();
+    for i in 0..len - 1 {
         j_min = i;
-        for j in i + 1..len as i32 {
+        for j in i + 1..len {
             if j >= len { break };
-            if vec[j as usize] < vec[j_min as usize] {
+            if vec[j] < vec[j_min] {
                 j_min = j;
             }
         }
         if j_min != i {
-            vec.swap(i as usize, j_min as usize);
+            vec.swap(i, j_min);
         }
     }
 }

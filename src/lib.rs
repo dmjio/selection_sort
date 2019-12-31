@@ -6,11 +6,13 @@ use std::vec::Vec;
 ///
 /// ```
 /// use std::vec::Vec;
+/// use selection_sort::selection_sort;
 ///
 /// fn main () {
 ///   let mut vec = vec![1, 3, 2];
 ///   selection_sort(&mut vec);
 ///   println!("{:?}", vec);
+///   assert!(vec == [1, 2, 3]);
 /// }
 /// // [1,2,3]
 /// ```

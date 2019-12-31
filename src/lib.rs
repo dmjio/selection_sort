@@ -1,11 +1,10 @@
 use std::vec::Vec;
 
-/// Executions Selection Sort
+/// Executes Selection Sort
 ///
 /// # Examples
 ///
 /// ```
-/// use std::vec::Vec;
 /// use selection_sort::selection_sort;
 ///
 /// fn main () {

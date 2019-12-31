@@ -39,12 +39,23 @@ mod tests {
     use super::*;
     use quickcheck::quickcheck;
     quickcheck! {
-      fn prop(vec: Vec<u32>) -> bool {
+        fn known_sort_test(vec: Vec<u32>) -> bool {
+          let mut a = vec.clone();
+          let mut b = vec.clone();
+          selection_sort (&mut a);
+          b.sort();
+          return a == b;
+        }
+    }
+    #[cfg(test)]
+    quickcheck! {
+      fn idempotency(vec: Vec<u32>) -> bool {
         let mut a = vec.clone();
         let mut b = vec.clone();
         selection_sort (&mut a);
-        b.sort();
+        selection_sort (&mut a);
+        selection_sort (&mut b);
         return a == b;
+      }
     }
-  }
 }

@@ -1,10 +1,12 @@
+[workspace]
+members = [ "." ]
+
 [package]
 name = "selection_sort"
 version = "0.1.0"
 authors = ["David Johnson <djohnson.m@gmail.com>"]
 edition = "2018"
+license = "MIT"
 repository = "https://github.com/dmjio/selection_sort"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
-[dependencies]
+description = "Selection sort algorithm"
+readme = "README.md"

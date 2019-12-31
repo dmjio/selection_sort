@@ -1,6 +1,19 @@
 use std::vec::Vec;
 
-// Selection sort function
+/// Executions Selection Sort
+///
+/// # Examples
+///
+/// ```
+/// use std::vec::Vec;
+///
+/// fn main () {
+///   let mut vec = vec![1, 3, 2];
+///   selection_sort(&mut vec);
+///   println!("{:?}", vec);
+/// }
+/// // [1,2,3]
+/// ```
 pub fn selection_sort<T: PartialOrd>(vec: &mut Vec<T>) {
     let mut j_min;
     let len = vec.len();

@@ -4,7 +4,7 @@ members = [ "." ]
 [package]
 name = "selection_sort"
 version = "1.1.0"
-authors = ["David Johnson <djohnson.m@gmail.com>"]
+authors = ["David Johnson <code@dmj.io>"]
 edition = "2018"
 license = "MIT"
 repository = "https://github.com/dmjio/selection_sort"
